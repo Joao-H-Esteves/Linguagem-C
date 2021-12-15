@@ -46,8 +46,9 @@ int main(void)
     {
         printf("\n-------------- CADASTRO CLINTE VIP --------------\n");
         printf("\n\nNome do cliente.......:");
-        setbuf(stdin, NULL);                          // limpar o puffer do teclado.
+       // setbuf(stdin, NULL);                          
         _getche();
+        fflush(stdin);                          // limpar o puffer do teclado.
         fgets(cad_principal[i].nome, 40, stdin);
 
         printf("\n\nCPF...................:");
