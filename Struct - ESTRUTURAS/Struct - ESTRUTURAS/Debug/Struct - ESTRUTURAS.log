@@ -1,2 +1,7 @@
 ﻿  Notas_Aluno.cpp
-  Struct - ESTRUTURAS.vcxproj -> C:\Users\Administrador\Documents\GitHub\Linguagem-C\Struct - ESTRUTURAS\Debug\Struct - ESTRUTURAS.exe
+C:\Users\Administrador\Documents\GitHub\Linguagem-C\Struct - ESTRUTURAS\Struct - ESTRUTURAS\Notas_Aluno.cpp(22,27): error C2086: 'main::ficha_de_aluno aluno': redefinição
+C:\Users\Administrador\Documents\GitHub\Linguagem-C\Struct - ESTRUTURAS\Struct - ESTRUTURAS\Notas_Aluno.cpp(18): message : consulte a declaração de 'aluno'
+  Struct - ESTRUTURAS.cpp
+C:\Users\Administrador\Documents\GitHub\Linguagem-C\Struct - ESTRUTURAS\Struct - ESTRUTURAS\Struct - ESTRUTURAS.cpp(23,30): warning C4305: '=': truncamento de 'double' para 'float'
+C:\Users\Administrador\Documents\GitHub\Linguagem-C\Struct - ESTRUTURAS\Struct - ESTRUTURAS\Struct - ESTRUTURAS.cpp(32,37): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+  Gerando Código...

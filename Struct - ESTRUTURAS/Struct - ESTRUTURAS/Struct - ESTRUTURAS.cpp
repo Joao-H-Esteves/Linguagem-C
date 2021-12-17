@@ -20,7 +20,7 @@ int teste(void)//vazio
 		atual.horas = 13;
 		atual.minutos = 34;
 		atual.segundos = 47;
-		atual.decimos = 0.483543589;
+		atual.decimos = 0.4835435;
 		
 
 		// declarando uma nova Struct e utilizando a "atual" para somar suas variaveis.
