@@ -14,9 +14,9 @@ struct tp_endereco{
     int num;
     char bairro[20];
     char cidade[20];
-    char estado[2];
+    char estado[10];
     int cep;
-}   end;
+}   end;        // Nome que usaremos paRA CHAMAR A ESTRUTURA NO CODIGO
 
 struct tp_nascimento{
     int dia;
@@ -34,8 +34,7 @@ struct cadastro_cliente {
     struct tp_endereco end; // deve nomear a struct
     struct tp_nascimento nasc;
 
-}  
-cad_principal[2]; //VETOR PARA ARMAZENAR VARIOS CADASTROS
+}   cad_principal[2]; //VETOR PARA ARMAZENAR VARIOS CADASTROS
 
 
 int main(void)
@@ -44,13 +43,11 @@ int main(void)
 
     for (int i = 0; i < 2; i++)
     {
-        printf("\n-------------- CADASTRO CLINTE VIP --------------\n");
-        printf("\n\nNome do cliente.......:");
-       // setbuf(stdin, NULL);                          
-        _getche();
-        fflush(stdin);                          // limpar o puffer do teclado.
-        fgets(cad_principal[i].nome, 40, stdin);
+        puts("\n-------------- CADASTRO CLINTE VIP --------------\n");
 
+        printf("\n\nNome do cliente.......:");
+        scanf_s("%40s", cad_principal[i].nome, 40);
+       
         printf("\n\nCPF...................:");
         scanf_s("%d", &cad_principal[i].cpf);
 
@@ -58,24 +55,19 @@ int main(void)
         scanf_s("%d", &cad_principal[i].tel);
 
         printf("\n\nEndereço..............:");
-        //fflush(stdin);
-        getchar();
-        fgets(cad_principal[i].end.rua, 40 , stdin);
+        scanf_s("%40s",cad_principal[i].end.rua, 40);
 
         printf("\n\nNumero................:");
         scanf_s("%d", &cad_principal[i].end.num);
 
-        printf("\n\nBairro................:");
-        fflush(stdin);
-        fgets(cad_principal[i].end.bairro, 20, stdin);
+        printf("\n\nBairro................:");        
+        scanf_s("%20s",cad_principal[i].end.bairro, 20);
 
-        printf("\n\nCidade................:");
-        fflush(stdin);
-        fgets(cad_principal[i].end.cidade, 20, stdin);
+        printf("\n\nCidade................:");       
+        scanf_s("%20s",cad_principal[i].end.cidade, 20);
 
-        printf("\n\nEstado................:");
-        fflush(stdin);
-        fgets(cad_principal[i].end.estado, 2, stdin);
+        printf("\n\nEstado................:");        
+        scanf_s("%10s",cad_principal[i].end.estado, 10);
 
         printf("\n\nCEP...................:");
         scanf_s("%d", &cad_principal[i].end.cep);
@@ -116,7 +108,7 @@ int main(void)
 
     system("pause");
 
-    return 666;
+    return 0;
 
 }
 
