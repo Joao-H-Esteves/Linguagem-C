@@ -10,21 +10,22 @@ int main(void)
 {
 
 	char resp = 's';
-
+	char nome[30] = "";
+	bool isFirst = true;
 	while (resp == 's')
 	{
 		float nota, soma = 0, media = 0;
-		char nome[30] = ""; 
-
-		printf("\n\n ***** Hogwarts Escola para Bruxos ***** \n"); // cabeçalho
-		printf("\n\t *** SISTEMA DE NOTAS *** \n");
+		
+		//memset(nome, 0, strlen(nome)); // zerar a string
+		printf("\n\n ** Hogwarts Escola para Bruxos ** \n"); // cabeçalho
+		printf("\n\t * SISTEMA DE NOTAS * \n");
 
 		printf("\nNome do Bruxo aluno: ");
-		fflush(stdin);								// limpar o lixo de buffer
-		fgets(nome, 30, stdin);						// pegar string com espaço
-		scanf_s("%30s", nome, 30);					// coloquei essa segunda coleta de dados pois a primeira estava pulando na repetição do laço
+		if (!isFirst)
+			getchar();
+		gets_s(nome);							// pegar string com espaço
 
-		for (int i = 1; i < 4; i++)					//entrada das notas 
+		for (int i = 1; i < 4; i++)					//~entrada das notas 
 		{
 
 			printf("\n Digite a nota %d : ", i);
@@ -50,9 +51,10 @@ int main(void)
 			printf("\n<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>");
 		}
 		printf("\n\nDeseja inserir notas de outro aluno? [s]/[n]");
+		if (!isFirst)
+			getchar();
 		resp = _getche();
-
+		isFirst = false;
 	}
 	return 0;
 }
-
