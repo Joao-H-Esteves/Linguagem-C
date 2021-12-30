@@ -1,0 +1,5 @@
+﻿  Função para concatenar strings.cpp
+C:\Users\Administrador\Documents\GitHub\Linguagem-C\Exercicios\Função para concatenar strings\Função para concatenar strings\Função para concatenar strings.cpp(40,19): error C2109: subscrito requer tipo de matriz ou ponteiro
+C:\Users\Administrador\Documents\GitHub\Linguagem-C\Exercicios\Função para concatenar strings\Função para concatenar strings\Função para concatenar strings.cpp(40,33): error C2109: subscrito requer tipo de matriz ou ponteiro
+C:\Users\Administrador\Documents\GitHub\Linguagem-C\Exercicios\Função para concatenar strings\Função para concatenar strings\Função para concatenar strings.cpp(44,27): error C2109: subscrito requer tipo de matriz ou ponteiro
+C:\Users\Administrador\Documents\GitHub\Linguagem-C\Exercicios\Função para concatenar strings\Função para concatenar strings\Função para concatenar strings.cpp(44,41): error C2109: subscrito requer tipo de matriz ou ponteiro
