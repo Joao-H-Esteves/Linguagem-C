@@ -1,4 +1,4 @@
-// Cadastro de cliente com struct.cpp : Este arquivo contém a função 'main'. A execução do programa começa e termina ali.
+// Cadastro de cliente com struct.cpp : Este arquivo contém a função 'main'.A execução do programa começa e termina ali.
 
 // Este programa terá Structs aninhadas ( uma dentro da outra)
 //
@@ -9,7 +9,7 @@
 #include <conio.h>
 
 
-struct tp_endereco{
+struct tp_endereco {
     char rua[40];
     int num;
     char bairro[20];
@@ -18,7 +18,7 @@ struct tp_endereco{
     int cep;
 }   end;        // Nome que usaremos paRA CHAMAR A ESTRUTURA NO CODIGO
 
-struct tp_nascimento{
+struct tp_nascimento {
     int dia;
     int mes;
     int ano;
@@ -27,7 +27,7 @@ struct tp_nascimento{
 // ESTRUTURA PRINCIPAL USADA JUNTO COM VETOR 
 struct cadastro_cliente {
     char nome[40];
-    int cpf;
+    char cpf[11];
     int tel;
 
     //struct aninhada:
@@ -39,47 +39,70 @@ struct cadastro_cliente {
 
 int main(void)
 {
-   // LOOPING PARA O CADASTRO DE CLIENTES
+    // LOOPING PARA O CADASTRO DE CLIENTES
 
     for (int i = 0; i < 2; i++)
     {
+
         puts("\n-------------- CADASTRO CLINTE VIP --------------\n");
 
         printf("\n\nNome do cliente.......:");
-        scanf_s("%40s", cad_principal[i].nome, 40);
-       
+        memset(cad_principal[i].nome, 0, strlen(cad_principal[i].nome));
+        scanf_s(" %40s%*c", cad_principal[i].nome, 40);
+
+
+
         printf("\n\nCPF...................:");
-        scanf_s("%d", &cad_principal[i].cpf);
+        memset(cad_principal[i].cpf, 0, strlen(cad_principal[i].cpf));
+        scanf_s("%11s%*c", &cad_principal[i].cpf);
+
+
 
         printf("\n\nTelefone..............:");
-        scanf_s("%d", &cad_principal[i].tel);
+        scanf_s(" %d%*c", &cad_principal[i].tel);
+
+
 
         printf("\n\nEndereço..............:");
-        scanf_s("%40s",cad_principal[i].end.rua, 40);
+        memset(cad_principal[i].end.rua, 0, strlen(cad_principal[i].end.rua));
+        scanf_s(" %40s%*c", cad_principal[i].end.rua, 40);
+
+
 
         printf("\n\nNumero................:");
-        scanf_s("%d", &cad_principal[i].end.num);
+        scanf_s(" %d%*c", &cad_principal[i].end.num);
 
-        printf("\n\nBairro................:");        
-        scanf_s("%20s",cad_principal[i].end.bairro, 20);
 
-        printf("\n\nCidade................:");       
-        scanf_s("%20s",cad_principal[i].end.cidade, 20);
+        printf("\n\nBairro................:");
+        memset(cad_principal[i].end.bairro, 0, strlen(cad_principal[i].end.bairro));
+        scanf_s(" %20s%*c", cad_principal[i].end.bairro, 20);
 
-        printf("\n\nEstado................:");        
-        scanf_s("%10s",cad_principal[i].end.estado, 10);
+
+        printf("\n\nCidade................:");
+        memset(cad_principal[i].end.cidade, 0, strlen(cad_principal[i].end.cidade));
+        scanf_s(" %20s%*c", cad_principal[i].end.cidade, 20);
+
+
+        printf("\n\nEstado................:");
+        memset(cad_principal[i].end.estado, 0, strlen(cad_principal[i].end.estado));
+        scanf_s(" %10s%*c", cad_principal[i].end.estado, 10);
+
 
         printf("\n\nCEP...................:");
-        scanf_s("%d", &cad_principal[i].end.cep);
+        scanf_s(" %d%*c", &cad_principal[i].end.cep);
+
 
         printf("\n\nDia de Nascimento.....:");
-        scanf_s("%d", &cad_principal[i].nasc.dia);
+        scanf_s(" %d%*c", &cad_principal[i].nasc.dia);
+
 
         printf("\n\nMes de Nascimento.....:");
-        scanf_s("%d", &cad_principal[i].nasc.mes);
+        scanf_s(" %d%*c", &cad_principal[i].nasc.mes);
+
 
         printf("\n\nAno de Nascimento.....:");
-        scanf_s("%d", &cad_principal[i].nasc.ano);
+        scanf_s(" %d%*c", &cad_principal[i].nasc.ano);
+
 
     } // FIM DA COLETA DE DADOS (E LOOPING)
 
@@ -92,7 +115,7 @@ int main(void)
     for (int i = 0; i < 2; i++)
     {
         printf("\nNome do cliente.......: %s", cad_principal[i].nome);
-        printf("\nCPF...................: %d", cad_principal[i].cpf);
+        printf("\nCPF...................: %s", cad_principal[i].cpf);
         printf("\nTelefone..............: %d", cad_principal[i].tel);
         printf("\nEndereço..............: %s", cad_principal[i].end.rua);
         printf("\nNumero................: %d", cad_principal[i].end.num);
@@ -103,7 +126,7 @@ int main(void)
         printf("\nDia de Nascimento.....: %d", cad_principal[i].nasc.dia);
         printf("\nMes de Nascimento.....: %d", cad_principal[i].nasc.mes);
         printf("\nAno de Nascimento.....: %d", cad_principal[i].nasc.ano);
-        printf("\n\n");        
+        printf("\n\n");
     }
 
     system("pause");
@@ -111,4 +134,3 @@ int main(void)
     return 0;
 
 }
-
