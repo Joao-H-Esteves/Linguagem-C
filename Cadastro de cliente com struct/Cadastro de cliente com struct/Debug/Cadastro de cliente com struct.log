@@ -1,6 +1,2 @@
 ﻿  Cadastro de cliente com struct.cpp
-C:\Users\Lenovo-PC\OneDrive\Documentos\GitHub\Linguagem-C\Cadastro de cliente com struct\Cadastro de cliente com struct\Cadastro de cliente com struct.cpp(58,17): warning C4473: 'scanf_s' : não há argumentos suficientes transmitidos para a cadeia de caracteres de formato
-C:\Users\Lenovo-PC\OneDrive\Documentos\GitHub\Linguagem-C\Cadastro de cliente com struct\Cadastro de cliente com struct\Cadastro de cliente com struct.cpp(58,17): message : espaços reservados e seus parâmetros esperam 2 argumentos variadic, mas 1 foram fornecidos
-C:\Users\Lenovo-PC\OneDrive\Documentos\GitHub\Linguagem-C\Cadastro de cliente com struct\Cadastro de cliente com struct\Cadastro de cliente com struct.cpp(58,17): message : o argumento variadic 2 ausente é requerido pela cadeia de formato '%11s'
-C:\Users\Lenovo-PC\OneDrive\Documentos\GitHub\Linguagem-C\Cadastro de cliente com struct\Cadastro de cliente com struct\Cadastro de cliente com struct.cpp(58,17): message : esse argumento é usado como um tamanho do buffer
   Cadastro de cliente com struct.vcxproj -> C:\Users\Lenovo-PC\OneDrive\Documentos\GitHub\Linguagem-C\Cadastro de cliente com struct\Debug\Cadastro de cliente com struct.exe
