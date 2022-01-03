@@ -46,7 +46,8 @@ int main(void)
         puts("\n-------------- CADASTRO CLINTE VIP --------------\n");
 
         printf("\n\nNome do cliente.......:");
-        scanf_s("%40s", cad_principal[i].nome, 40);
+        memset(cad_principal[i].nome, 0, strlen(cad_principal[i].nome)); // metodo para zera buffer e impedir que pule dados ao pressionar enter
+        gets_s(cad_principal[i].nome, 40);// gets_s para permitir strings com mais de um nome (usar o espaço)
        
         printf("\n\nCPF...................:");
         scanf_s("%d", &cad_principal[i].cpf);
@@ -55,19 +56,23 @@ int main(void)
         scanf_s("%d", &cad_principal[i].tel);
 
         printf("\n\nEndereço..............:");
-        scanf_s("%40s",cad_principal[i].end.rua, 40);
+        memset(cad_principal[i].end.rua, 0, strlen(cad_principal[i].end.rua));
+        gets_s(cad_principal[i].end.rua, 40);
 
         printf("\n\nNumero................:");
         scanf_s("%d", &cad_principal[i].end.num);
 
         printf("\n\nBairro................:");        
+
         scanf_s("%20s",cad_principal[i].end.bairro, 20);
 
         printf("\n\nCidade................:");       
-        scanf_s("%20s",cad_principal[i].end.cidade, 20);
+        memset(cad_principal[i].end.cidade, 0, strlen(cad_principal[i].end.cidade));
+        gets_s(cad_principal[i].end.cidade, 20);
 
-        printf("\n\nEstado................:");        
-        scanf_s("%10s",cad_principal[i].end.estado, 10);
+        printf("\n\nEstado................:");
+        memset(cad_principal[i].end.estado, 0, strlen(cad_principal[i].end.estado));
+        gets_s(cad_principal[i].end.estado, 10);
 
         printf("\n\nCEP...................:");
         scanf_s("%d", &cad_principal[i].end.cep);
