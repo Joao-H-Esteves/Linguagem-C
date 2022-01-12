@@ -51,17 +51,18 @@ int menu()
     return opcao;
 }
 
-int FACIL()
+int JOGO(int dificult)
 {
     int ale,num, tent=0;
     srand((unsigned)time(NULL)); // comando para vaiar o numero aleatorio
-    ale = rand() % 11;          // Comando para gerar um numero pelo sistema
+    ale = rand() % dificult;          // Comando para gerar um numero pelo sistema
     do
     {       
+        printf("\n |------------ Tentativa numero  %d  ------------|", tent);
         printf("\n |---------      Digite a abaixo      ----------|\n");
         scanf_s("%d", &num);
 
-        if (num < 0 || num >10)
+        if (num < 0 || num >dificult)
         {           
             printf("\n |-------------- NUMERO INVALIDO ---------------|");
         }
@@ -84,72 +85,7 @@ int FACIL()
     return (menu());    
 }
 
-int MEDIO()
-{
-    int ale, num, tent = 0;
-    srand((unsigned)time(NULL)); // comando para vaiar o numero aleatorio
-    ale = rand() % 101;          // Comando para gerar um numero pelo sistema
-    do
-    {
-        printf("\n |---------      Digite a abaixo      ----------|");
-        printf("\n |---------       Tentativas: %d       ----------|\n",tent);
-        scanf_s("%d", &num);
 
-        if (num < 0 || num >100)
-        {
-            printf("\n |-------------- NUMERO INVALIDO ---------------|");
-        }
-        if (num < ale)
-        {
-            printf("\n |----- O CORINGA e maior que o seu numero -----|");
-        }
-        if (num > ale)
-        {
-            printf("\n |----- O CORINGA e menor que o seu numero -----|");
-        }
-        tent++;
-    } while (num != ale);
-
-    printf("\n |          PARABENS, VOCE ACERTOU !!!          |");
-    printf("\n |          Numero de tentativas: %d            |\n\n", tent);
-
-    system("pause");
-
-    return (menu());
-}
-
-int DIFICIL()
-{
-    int ale, num, tent = 0;
-    srand((unsigned)time(NULL)); // comando para vaiar o numero aleatorio
-    ale = rand() % 1001;          // Comando para gerar um numero pelo sistema
-    do
-    {
-        printf("\n |---------      Digite a abaixo      ----------|\n");
-        scanf_s("%d", &num);
-
-        if (num < 0 || num >1000)
-        {
-            printf("\n |-------------- NUMERO INVALIDO ---------------|");
-        }
-        if (num < ale)
-        {
-            printf("\n |----- O CORINGA e maior que o seu numero -----|");
-        }
-        if (num > ale)
-        {
-            printf("\n |----- O CORINGA e menor que o seu numero -----|");
-        }
-        tent++;
-    } while (num != ale);
-
-    printf("\n |          PARABENS, VOCE ACERTOU !!!          |");
-    printf("\n |          Numero de tentativas: %d             |\n\n", tent);
-
-    system("pause");
-
-    return (menu());
-}
 
 int main()
 {
@@ -165,21 +101,21 @@ int main()
         printf("\n |------------------MODO FACIL------------------|");
         printf("\n |--------- Escolha um numero de 0 a 10 --------|");
         
-        FACIL();
+        JOGO(11);
         break;
     case 2:
         system("cls");
         printf("\n |------------------MODO MEDIO------------------|");
         printf("\n |-------- Escolha um numero de 0 a 100 --------|");
                
-        MEDIO();
+        JOGO(101);
         break;
     case 3:
         system("cls");
         printf("\n |-----------------MODO DIFICIL-----------------|");
         printf("\n |-------- Escolha um numero de 0 a 1000 -------|");
         
-        DIFICIL();
+        JOGO(1001);
         break;
     case 4:
         system("cls");
@@ -188,7 +124,7 @@ int main()
         puts("\n | O algoritimo vai te dizer se o seu numero    |");
         puts("\n | esta a cima ou a baixo do valor CORINGA. No  |");
         puts("\n | final mostrara a quantidade de tentativas    |");
-        puts("\n | feitas ate o acerto. Bom jogo!               |");
+        puts("\n | feitas ate o acerto. Bom jogo!               |\n\n");
 
         system("pause");
         return menu();
@@ -203,6 +139,6 @@ int main()
     } while (opcao != 5);
    
 
-
+    return 0;
 }
 
