@@ -1,5 +1,8 @@
-# Linguagem-C
-## Programas pequenos do curso em C
+# Linguagem-C 
+## Pasta de arquivos em Linguagem c
+
+### Cada pasta contém seu arquivo, o código fonte e a sua documentação.
+
 
 * Função
 * Estruturas Strucst
